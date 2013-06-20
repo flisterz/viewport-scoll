@@ -17,30 +17,28 @@ body{
     width: 500px;
     margin: 0 auto;
 }
-#container .hideme
+.hideme
 {
     margin:0 auto 50px;
     height: 100px;
     width: 500px;
     background-color:lightgreen;
+        transition: all 0.5s linear;
+
 }
-#container .hideme.small{
+.hideme.small{
 	width: 230px;
 	float: left;
 	margin-right: 40px;
 }
-#container .hideme.small.last{
+.hideme.small.last{
     margin-right: 0;
 }
-.share{
-	background: red;
-    padding: 20px;
-    opacity:0;
-	transition: opacity 0.3s linear;
-}
+
 .passing{
-	opacity: 1;
-	transition: opacity 0.3s linear;
+        background: red;
+
+	transition: all 0.3s linear;
 }
 #ta{
     position:absolute;
