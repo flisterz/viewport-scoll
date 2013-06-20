@@ -23,7 +23,7 @@ body{
     height: 100px;
     width: 500px;
     background-color:lightgreen;
-        transition: all 0.5s linear;
+    transition: all 0.5s linear;
 
 }
 .hideme.small{
@@ -36,14 +36,14 @@ body{
 }
 
 .passing{
-        background: red;
-
-	transition: all 0.3s linear;
+    background: yellow;
+    transition: all 0.3s linear;
 }
+
 #ta{
     position:absolute;
     width:100%;
-    height:15px;
+    height:1px;
     border-bottom:1px solid red;
     color:#eee;
     font-size: 27px;
@@ -51,7 +51,7 @@ body{
 #ba{
     position:absolute;
     width:100%;
-    height:15px;
+    height:1px;
     border-top:1px solid red;
     color:#eee;
     font-size: 27px;
