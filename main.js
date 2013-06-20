@@ -1,6 +1,6 @@
 $(document).ready(function() {
-		var bottom_constraint = $(window).scrollTop() + ($(window).height()/2 + 150);
-		var top_constraint = $(window).scrollTop() + ($(window).height()/2 - 150);
+		var bottom_constraint = $(window).scrollTop() + ($(window).height()/2 + 120);
+		var top_constraint = $(window).scrollTop() + ($(window).height()/2 - 120);
 		$("#ta").css({'top': top_constraint});
 		$("#ta i").html(top_constraint);
 		$("#ba").css({'top': bottom_constraint});
@@ -10,9 +10,9 @@ $(document).ready(function() {
         $('.hideme').each( function(i){
             var bottom_of_object = $(this).position().top + $(this).outerHeight();
             var top_of_object = $(this).position().top;
-            var bottom_constraint = $(window).scrollTop() + ($(window).height()/2 + 150);
-            var top_constraint = $(window).scrollTop() + ($(window).height()/2 - 150);
-            if((bottom_constraint > bottom_of_object) && (top_constraint < bottom_of_object)){
+            var bottom_constraint = $(window).scrollTop() + ($(window).height()/2 + 120);
+            var top_constraint = $(window).scrollTop() + ($(window).height()/2 - 120);
+            if((bottom_constraint > top_of_object) && (top_constraint < bottom_of_object)){
                 $(this).addClass('passing');
             } else if ((top_constraint > bottom_of_object) || (top_constraint < top_of_object)) {
             	$(this).removeClass('passing');
