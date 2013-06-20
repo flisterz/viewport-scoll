@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+ 	<title>Viewport scroll</title>
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function() {
+			    $(window).scroll( function(){
+			        $('.share').each( function(i){
+			            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+			            var top_of_object = $(this).position().top;
+			            var bottom_of_area = $(window).scrollTop() + ($(window).height()/2 + 150);
+			            var top_of_area = $(window).scrollTop() + ($(window).height()/2 - 150);
+
+			            if((bottom_of_area > top_of_object) && (top_of_area < bottom_of_object)){
+			                $(this).addClass('passing');
+			            } else if ((top_of_area > bottom_of_object) || (top_of_area < top_of_object)) {
+			            	$(this).removeClass('passing');
+			            }
+
+			      			$(this).html('TO: ' + top_of_object + ', BO: ' + bottom_of_object)
+			            $("#ta").css({'top': top_of_area});
+									$("#ta").html(top_of_area);
+			            $("#ba").css({'top': bottom_of_area});
+			            $("#ba").html(bottom_of_area);
+			        });
+			    });
+			});
+	</script>
+</head>
+<body>
+
+<div id="container">
+    <div class="hideme"><div class="share">Share buttons</div> </div>
+    <div class="hideme"><div class="share">Share buttons</div> </div>
+    <div class="hideme"><div class="share">Share buttons</div> </div>
+    <div class="hideme"><div class="share">Share buttons</div> </div>
+    <div class="hideme"><div class="share">Share buttons</div> </div>
+    <div class="hideme small"><div class="share">Share buttons</div> </div>
+    <div class="hideme small last"><div class="share">Share buttons</div> </div>
+    <div class="hideme clear"><div class="share">Share buttons</div> </div>
+    <div class="hideme"><div class="share">Share buttons</div> </div>
+    <div class="hideme"><div class="share">Share buttons</div> </div>
+</div>
+
+<p id="ta"></p>
+<p id="ba"></p>
+
+</body>
+</html>

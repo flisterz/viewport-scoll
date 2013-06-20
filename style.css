@@ -1,0 +1,60 @@
+*{
+    margin:0;
+	padding:0;
+}
+body{
+	background: #333;
+    font: 17px serif;
+}
+.clear{
+    clear: both;
+}
+#container
+{
+    height:2000px;
+    padding: 800px 0 1400px;
+    background:#333;
+    width: 500px;
+    margin: 0 auto;
+}
+#container .hideme
+{
+    margin:0 auto 50px;
+    height: 100px;
+    width: 500px;
+    background-color:lightgreen;
+}
+#container .hideme.small{
+	width: 230px;
+	float: left;
+	margin-right: 40px;
+}
+#container .hideme.small.last{
+    margin-right: 0;
+}
+.share{
+	background: red;
+    padding: 20px;
+    opacity:0;
+	transition: opacity 0.3s linear;
+}
+.passing{
+	opacity: 1;
+	transition: opacity 0.3s linear;
+}
+#ta{
+    position:absolute;
+    width:100%;
+    height:15px;
+    border-bottom:1px solid red;
+    color:#eee;
+    font-size: 27px;
+}
+#ba{
+    position:absolute;
+    width:100%;
+    height:15px;
+    border-top:1px solid red;
+    color:#eee;
+    font-size: 27px;
+}
